@@ -38,14 +38,14 @@ let slides = document.querySelectorAll('.slide');
 
 
 
-//// --------------- PROGRESS BAR
+//// --------------- PROGRESS BAR/OUR CAUSE
 
-document.addEventListener("DOMContentLoaded", function () {
+window.onload = function () {
     const causeSection = document.getElementById("cause");
     const progressBars = document.querySelectorAll(".cause-bar");
 
     // Target percentages for each progress bar
-    const progressValues = [101, 102, 40, 40]; 
+    const progressValues = [101, 102, 40, 40];
 
     let hasAnimated = false; // Prevents re-triggering animation multiple times
 
@@ -73,8 +73,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Run animation when scrolling and ensure it starts after the page fully loads
     window.addEventListener("scroll", animateProgressBars);
-});
+    animateProgressBars(); // Run on page load in case section is already visible
+};
+
 
 
 //----------------Javascript for scrolling
@@ -197,3 +200,17 @@ setInterval(checkScroll, 1000);
 
         // Start the carousel
         startInterval();
+
+
+
+        ////--------------DONATION SECTION HOMEPAGE----------
+        function setAmount(button, amount) {
+            // Reset all buttons to grey
+            const buttons = document.querySelectorAll('.amount-btn');
+            buttons.forEach(button => button.classList.remove('bg-[#522b81]', 'text-white'));
+            buttons.forEach(button => button.classList.add('bg-gray-300', 'text-black'));
+    
+            // Set the selected button to purple
+            button.classList.add('bg-[#522b81]', 'text-white');
+            document.getElementById('amount').value = '$' + amount;
+        }

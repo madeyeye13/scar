@@ -1,6 +1,37 @@
 
 
+@media (min-width: 728px) {
+    .testimonial {
+        flex: 1 0 50%;
+    }
 
+
+    /*----------------FOOTER----------------*/
+
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .logo-section, .contact-section, .menu-section {
+        width: auto;
+    }
+
+    .menu-section ul {
+        text-align: right;
+    }
+
+    .menu-section li::after {
+        right: 0;
+        left: auto;
+    }
+
+    .contact-section {
+        align-self: center;
+    }
+}
 
 
 
@@ -165,7 +196,19 @@
 
 
 
+    /*-----------------------Testimonial---------------*/
 
 
+    .testimonial {
+        flex: 1 0 33.33%;
+    }
 
+
+    /*---------------------------FOOTER----------------*/
+
+    
+    .footer-container {
+                display: flex;
+                flex-direction: row;
+            }
 }

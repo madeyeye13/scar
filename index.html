@@ -17,7 +17,8 @@
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaquery.css">
@@ -129,7 +130,7 @@
 
         <div class="hero">
             <div class="slides">
-                <div class="slide active" style="background-image: url('image/ch1.jpg');">
+                <div class="slide active" style="background-image: url('image/ch01.jpg');">
                     <div class="overlay">
                         <h1 class="hero-title">Make A Big Difference By Small Effort</h1>
                         <p class="hero-text">Even the smallest act of kindness can create a ripple effect of positive change. Your contribution, no matter how small, helps bring hope and support to those in need.</p>
@@ -214,7 +215,7 @@
 
         <div class="cause-mom">
 
-            <div class="cause-mom1">
+            <div class="cause-mom1" style="background-image: url(image/ch5.jpg);">
 
                 <div class="cause-info">
                     <h2>Providing access to clean water, sanitation, and hygiene</h2>
@@ -259,7 +260,7 @@
 
             <!------------------THIRD------------------>
 
-            <div class="cause-mom1" style="background-image: url(image/ch7.jpg);">
+            <div class="cause-mom1" style="background-image: url(image/ch7.jpg);" data-progress="40">
 
                 <div class="cause-info">
                     <h2>Providing Education</h2>
@@ -283,7 +284,7 @@
             <!------------------FOURTH------------------>
 
             <a href="#">
-                <div class="cause-mom1" style="background-image: url(image/ch8.jpg);">
+                <div class="cause-mom1" style="background-image: url(image/ch18.jpg);" data-progress="40">
 
                     <div class="cause-info">
                         <h2>Save Child Africa With Us</h2>
@@ -343,7 +344,7 @@
             </div>
 
             <div class="story-img">
-                <img src="image/ch9.jpg">
+                <img src="image/ch19.jpg">
             </div>
 
 
@@ -476,8 +477,124 @@
     </section>
 
 
+    <!------------------DONATION---------------------->
 
 
+    <section id="donation" class="py-16 bg-gray-100">
+        <div class="flex flex-col md:flex-row">
+            <div class="w-full md:w-1/2">
+                <div class="relative">
+                    <img src="image/ch20.jpg" class="w-full h-auto object-cover" alt="image">
+                </div>
+            </div>
+        
+            <div class="w-full md:w-1/2 px-6 py-8">
+                <div class="space-y-6">
+                    <h2 class="text-3xl font-semibold text-gray-800">Support Our Cause – Every Contribution Matters!</h2>
+                    
+                    <div class="space-y-4">
+                        <label for="amount" class="block text-lg font-medium text-gray-700">Donation Amount</label>
+                        <div class="flex items-center space-x-2 border border-gray-300 p-2">
+                            <span class="text-xl text-gray-600">$</span>
+                            <input type="text" id="amount" placeholder="0" class="w-full border-none focus:ring-0 text-lg text-gray-800 p-1">
+                        </div>
+                        
+                        <!-- Quick Amounts in a Row -->
+                        <div class="flex space-x-4">
+                            <button onclick="setAmount(this, 5)" class="amount-btn bg-gray-300 text-black py-2 px-4"> $5 </button>
+                            <button onclick="setAmount(this, 10)" class="amount-btn bg-gray-300 text-black py-2 px-4"> $10 </button>
+                            <button onclick="setAmount(this, 20)" class="amount-btn bg-gray-300 text-black py-2 px-4"> $20 </button>
+                            <button onclick="setAmount(this, 30)" class="amount-btn bg-gray-300 text-black py-2 px-4"> $30 </button>
+                        </div>
+    
+                        <h3 class="text-xl font-semibold text-gray-800">Select Cause</h3>
+                        <div class="space-y-4">
+                            <label class="flex items-center space-x-3">
+                                <input type="radio" name="cause" value="education" class="form-radio text-blue-600">
+                                <span class="icon text-blue-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8V3m0 0l-3 3m3-3l3 3m9 5l-9 7-9-7M3 13l9 7 9-7"></path>
+                                    </svg>
+                                </span>
+                                <span>Providing Education</span>
+                            </label>
+    
+                            <label class="flex items-center space-x-3">
+                                <input type="radio" name="cause" value="save_child_africa" class="form-radio text-green-600">
+                                <span class="icon text-green-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8V3m0 0l-3 3m3-3l3 3m9 5l-9 7-9-7M3 13l9 7 9-7"></path>
+                                    </svg>
+                                </span>
+                                <span>Save Child Africa</span>
+                            </label>
+    
+                            <label class="flex items-center space-x-3">
+                                <input type="radio" name="cause" value="water_hygiene" class="form-radio text-teal-600">
+                                <span class="icon text-teal-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8V3m0 0l-3 3m3-3l3 3m9 5l-9 7-9-7M3 13l9 7 9-7"></path>
+                                    </svg>
+                                </span>
+                                <span>Water & Hygiene</span>
+                            </label>
+    
+                            <label class="flex items-center space-x-3">
+                                <input type="radio" name="cause" value="goods_donation" class="form-radio text-purple-600">
+                                <span class="icon text-purple-600">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8V3m0 0l-3 3m3-3l3 3m9 5l-9 7-9-7M3 13l9 7 9-7"></path>
+                                    </svg>
+                                </span>
+                                <span>Goods Donation</span>
+                            </label>
+                        </div>
+                        <button class="mt-6 w-full py-3 text-white bg-[#522b81] hover:bg-purple-700 text-lg">Donate Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-----------------------FOOTER--------------------->
+    
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="logo-section">
+                <img src="image/logo.png" alt="Logo">
+                <div class="social-iconss">
+                    <a href="#" class="ri-facebook-fill"></a>
+                    <a href="#" class="ri-twitter-fill"></a>
+                    <a href="#" class="ri-linkedin-fill"></a>
+                    <a href="#" class="ri-youtube-fill"></a>
+                </div>
+            </div>
+
+            <div class="contact-section">
+                <h3>Contacts</h3>
+                <div class="contact-info2">
+                    <p>Montreal, QC, Canada</p>
+                    <a href="tel:+14383229937" style="margin-bottom: 10px; margin-top: 10px;">+1 (438)322-9937</a>
+                    <br>
+                    <a href="mailto:scarfoundation8@gmail.com">scarfoundation8@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="men-section">
+                <h3>Main Menu</h3>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Donate</li>
+                    <li>Get Involved</li>
+                    <li>Shop</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
 
 
